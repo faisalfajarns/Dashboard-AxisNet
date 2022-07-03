@@ -1,0 +1,6 @@
+framework module Pods_CloneAxisNet_CloneAxisNetUITests {
+  umbrella header "Pods-CloneAxisNet-CloneAxisNetUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

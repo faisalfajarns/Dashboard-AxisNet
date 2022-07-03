@@ -1,0 +1,945 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2C18282AF0963F3996A909B8 /* Pods_CloneAxisNetTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240AFDA7C69FC87E8AD82659 /* Pods_CloneAxisNetTests.framework */; };
+		4B307C5428659DAF00946849 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B307C5328659DAF00946849 /* GoogleService-Info.plist */; };
+		4B35A4DB286E836D009FE1CC /* SecondHeaderComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B35A4DA286E836D009FE1CC /* SecondHeaderComponentView.swift */; };
+		4B5DD7EE285ACFBC00F13FB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5DD7ED285ACFBC00F13FB3 /* AppDelegate.swift */; };
+		4B5DD7F0285ACFBC00F13FB3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5DD7EF285ACFBC00F13FB3 /* SceneDelegate.swift */; };
+		4B5DD7F2285ACFBC00F13FB3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5DD7F1285ACFBC00F13FB3 /* ViewController.swift */; };
+		4B5DD7F7285ACFBE00F13FB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B5DD7F6285ACFBE00F13FB3 /* Assets.xcassets */; };
+		4B5DD7FA285ACFBE00F13FB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B5DD7F8285ACFBE00F13FB3 /* LaunchScreen.storyboard */; };
+		4B5DD805285ACFBF00F13FB3 /* CloneAxisNetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5DD804285ACFBF00F13FB3 /* CloneAxisNetTests.swift */; };
+		4B5DD80F285ACFBF00F13FB3 /* CloneAxisNetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5DD80E285ACFBF00F13FB3 /* CloneAxisNetUITests.swift */; };
+		4B5DD811285ACFBF00F13FB3 /* CloneAxisNetUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5DD810285ACFBF00F13FB3 /* CloneAxisNetUITestsLaunchTests.swift */; };
+		4B78A361285AF40200E7ADD2 /* AssetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B78A360285AF40200E7ADD2 /* AssetModel.swift */; };
+		4B78A363285AF52E00E7ADD2 /* AssetServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B78A362285AF52E00E7ADD2 /* AssetServices.swift */; };
+		4B78A36A285C8AEE00E7ADD2 /* FirstHeaderComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B78A369285C8AEE00E7ADD2 /* FirstHeaderComponentView.swift */; };
+		4B78A36C28602A0800E7ADD2 /* BalanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B78A36B28602A0800E7ADD2 /* BalanceModel.swift */; };
+		4B78A36E28602B1C00E7ADD2 /* BalanceServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B78A36D28602B1C00E7ADD2 /* BalanceServices.swift */; };
+		4B78A3732861687E00E7ADD2 /* ActivePackageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B78A3722861687E00E7ADD2 /* ActivePackageCollectionViewCell.swift */; };
+		4B78A37528616B4A00E7ADD2 /* ActivePackageCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B78A37428616B4A00E7ADD2 /* ActivePackageCollectionView.swift */; };
+		4B78A37728616B7700E7ADD2 /* ActivePackageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B78A37628616B7700E7ADD2 /* ActivePackageModel.swift */; };
+		4B78A37928617A9900E7ADD2 /* ActivePackageServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B78A37828617A9900E7ADD2 /* ActivePackageServices.swift */; };
+		4B7978F5286AC03C00893748 /* RecommendedPackageCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7978F4286AC03C00893748 /* RecommendedPackageCollectionView.swift */; };
+		4B7978F7286AC05200893748 /* RecommendedPackageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7978F6286AC05200893748 /* RecommendedPackageCollectionViewCell.swift */; };
+		4B7978FB286AE59800893748 /* ForevelOnlineCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7978FA286AE59800893748 /* ForevelOnlineCollectionView.swift */; };
+		4B7978FD286AEFAF00893748 /* ForeverOnlineCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7978FC286AEFAF00893748 /* ForeverOnlineCollectionViewCell.swift */; };
+		4B8AEC6028696ED400FBB8EB /* RecommendedPackageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8AEC5F28696ED300FBB8EB /* RecommendedPackageModel.swift */; };
+		4B8AEC62286970DD00FBB8EB /* RecommendedPackageServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8AEC61286970DD00FBB8EB /* RecommendedPackageServices.swift */; };
+		4BF1D5272865B96800AFCE21 /* ListFeaturesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF1D5262865B96800AFCE21 /* ListFeaturesCollectionView.swift */; };
+		4BF1D5292865B98300AFCE21 /* ListFeaturesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF1D5282865B98300AFCE21 /* ListFeaturesCollectionViewCell.swift */; };
+		4BF1D52B2865CF8F00AFCE21 /* ListFeaturesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF1D52A2865CF8F00AFCE21 /* ListFeaturesModel.swift */; };
+		4BF1D52D2868854400AFCE21 /* ListFeaturesServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF1D52C2868854400AFCE21 /* ListFeaturesServices.swift */; };
+		C7DF3EB6C4C01384918CC8D4 /* Pods_CloneAxisNet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A4FEA9FED29460830B44323 /* Pods_CloneAxisNet.framework */; };
+		E2D550EF56EF97308E0EBF5E /* Pods_CloneAxisNet_CloneAxisNetUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B78072D75F95AA81182CBAE5 /* Pods_CloneAxisNet_CloneAxisNetUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4B5DD801285ACFBF00F13FB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B5DD7E2285ACFBC00F13FB3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4B5DD7E9285ACFBC00F13FB3;
+			remoteInfo = CloneAxisNet;
+		};
+		4B5DD80B285ACFBF00F13FB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B5DD7E2285ACFBC00F13FB3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4B5DD7E9285ACFBC00F13FB3;
+			remoteInfo = CloneAxisNet;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		06B57E09C575E5C96B79B685 /* Pods-CloneAxisNet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloneAxisNet.debug.xcconfig"; path = "Target Support Files/Pods-CloneAxisNet/Pods-CloneAxisNet.debug.xcconfig"; sourceTree = "<group>"; };
+		240AFDA7C69FC87E8AD82659 /* Pods_CloneAxisNetTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CloneAxisNetTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A4FEA9FED29460830B44323 /* Pods_CloneAxisNet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CloneAxisNet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		43DC11BEB6D29DDFFE02222C /* Pods-CloneAxisNetTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloneAxisNetTests.release.xcconfig"; path = "Target Support Files/Pods-CloneAxisNetTests/Pods-CloneAxisNetTests.release.xcconfig"; sourceTree = "<group>"; };
+		4B307C5328659DAF00946849 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4B35A4DA286E836D009FE1CC /* SecondHeaderComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondHeaderComponentView.swift; sourceTree = "<group>"; };
+		4B5DD7EA285ACFBC00F13FB3 /* CloneAxisNet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloneAxisNet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B5DD7ED285ACFBC00F13FB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4B5DD7EF285ACFBC00F13FB3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4B5DD7F1285ACFBC00F13FB3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4B5DD7F6285ACFBE00F13FB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4B5DD7F9285ACFBE00F13FB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4B5DD7FB285ACFBE00F13FB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B5DD800285ACFBF00F13FB3 /* CloneAxisNetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CloneAxisNetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B5DD804285ACFBF00F13FB3 /* CloneAxisNetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloneAxisNetTests.swift; sourceTree = "<group>"; };
+		4B5DD80A285ACFBF00F13FB3 /* CloneAxisNetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CloneAxisNetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B5DD80E285ACFBF00F13FB3 /* CloneAxisNetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloneAxisNetUITests.swift; sourceTree = "<group>"; };
+		4B5DD810285ACFBF00F13FB3 /* CloneAxisNetUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloneAxisNetUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4B78A360285AF40200E7ADD2 /* AssetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetModel.swift; sourceTree = "<group>"; };
+		4B78A362285AF52E00E7ADD2 /* AssetServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetServices.swift; sourceTree = "<group>"; };
+		4B78A369285C8AEE00E7ADD2 /* FirstHeaderComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstHeaderComponentView.swift; sourceTree = "<group>"; };
+		4B78A36B28602A0800E7ADD2 /* BalanceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceModel.swift; sourceTree = "<group>"; };
+		4B78A36D28602B1C00E7ADD2 /* BalanceServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceServices.swift; sourceTree = "<group>"; };
+		4B78A3722861687E00E7ADD2 /* ActivePackageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivePackageCollectionViewCell.swift; sourceTree = "<group>"; };
+		4B78A37428616B4A00E7ADD2 /* ActivePackageCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivePackageCollectionView.swift; sourceTree = "<group>"; };
+		4B78A37628616B7700E7ADD2 /* ActivePackageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivePackageModel.swift; sourceTree = "<group>"; };
+		4B78A37828617A9900E7ADD2 /* ActivePackageServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivePackageServices.swift; sourceTree = "<group>"; };
+		4B7978F4286AC03C00893748 /* RecommendedPackageCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedPackageCollectionView.swift; sourceTree = "<group>"; };
+		4B7978F6286AC05200893748 /* RecommendedPackageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedPackageCollectionViewCell.swift; sourceTree = "<group>"; };
+		4B7978FA286AE59800893748 /* ForevelOnlineCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForevelOnlineCollectionView.swift; sourceTree = "<group>"; };
+		4B7978FC286AEFAF00893748 /* ForeverOnlineCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForeverOnlineCollectionViewCell.swift; sourceTree = "<group>"; };
+		4B8AEC5F28696ED300FBB8EB /* RecommendedPackageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedPackageModel.swift; sourceTree = "<group>"; };
+		4B8AEC61286970DD00FBB8EB /* RecommendedPackageServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedPackageServices.swift; sourceTree = "<group>"; };
+		4BF1D5262865B96800AFCE21 /* ListFeaturesCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFeaturesCollectionView.swift; sourceTree = "<group>"; };
+		4BF1D5282865B98300AFCE21 /* ListFeaturesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFeaturesCollectionViewCell.swift; sourceTree = "<group>"; };
+		4BF1D52A2865CF8F00AFCE21 /* ListFeaturesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFeaturesModel.swift; sourceTree = "<group>"; };
+		4BF1D52C2868854400AFCE21 /* ListFeaturesServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFeaturesServices.swift; sourceTree = "<group>"; };
+		4FF3866EDAAFB618AE315692 /* Pods-CloneAxisNet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloneAxisNet.release.xcconfig"; path = "Target Support Files/Pods-CloneAxisNet/Pods-CloneAxisNet.release.xcconfig"; sourceTree = "<group>"; };
+		85EF28806A188ECCF9EA26CC /* Pods-CloneAxisNet-CloneAxisNetUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloneAxisNet-CloneAxisNetUITests.debug.xcconfig"; path = "Target Support Files/Pods-CloneAxisNet-CloneAxisNetUITests/Pods-CloneAxisNet-CloneAxisNetUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B78072D75F95AA81182CBAE5 /* Pods_CloneAxisNet_CloneAxisNetUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CloneAxisNet_CloneAxisNetUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D276B20D067BA46273D3FF6E /* Pods-CloneAxisNet-CloneAxisNetUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloneAxisNet-CloneAxisNetUITests.release.xcconfig"; path = "Target Support Files/Pods-CloneAxisNet-CloneAxisNetUITests/Pods-CloneAxisNet-CloneAxisNetUITests.release.xcconfig"; sourceTree = "<group>"; };
+		DB509D1E1AAA8F264AC7C552 /* Pods-CloneAxisNetTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloneAxisNetTests.debug.xcconfig"; path = "Target Support Files/Pods-CloneAxisNetTests/Pods-CloneAxisNetTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4B5DD7E7285ACFBC00F13FB3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7DF3EB6C4C01384918CC8D4 /* Pods_CloneAxisNet.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B5DD7FD285ACFBF00F13FB3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C18282AF0963F3996A909B8 /* Pods_CloneAxisNetTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B5DD807285ACFBF00F13FB3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2D550EF56EF97308E0EBF5E /* Pods_CloneAxisNet_CloneAxisNetUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4B35A4D8286DA414009FE1CC /* FirstHeader */ = {
+			isa = PBXGroup;
+			children = (
+				4B78A369285C8AEE00E7ADD2 /* FirstHeaderComponentView.swift */,
+			);
+			path = FirstHeader;
+			sourceTree = "<group>";
+		};
+		4B35A4D9286DA461009FE1CC /* SecondHeader */ = {
+			isa = PBXGroup;
+			children = (
+				4B35A4DA286E836D009FE1CC /* SecondHeaderComponentView.swift */,
+			);
+			path = SecondHeader;
+			sourceTree = "<group>";
+		};
+		4B5DD7E1285ACFBC00F13FB3 = {
+			isa = PBXGroup;
+			children = (
+				4B5DD7EC285ACFBC00F13FB3 /* CloneAxisNet */,
+				4B5DD803285ACFBF00F13FB3 /* CloneAxisNetTests */,
+				4B5DD80D285ACFBF00F13FB3 /* CloneAxisNetUITests */,
+				4B5DD7EB285ACFBC00F13FB3 /* Products */,
+				5489927CAD2D08A6F1AA4126 /* Pods */,
+				50C8A9CE4FA3837F2A62890A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4B5DD7EB285ACFBC00F13FB3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4B5DD7EA285ACFBC00F13FB3 /* CloneAxisNet.app */,
+				4B5DD800285ACFBF00F13FB3 /* CloneAxisNetTests.xctest */,
+				4B5DD80A285ACFBF00F13FB3 /* CloneAxisNetUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4B5DD7EC285ACFBC00F13FB3 /* CloneAxisNet */ = {
+			isa = PBXGroup;
+			children = (
+				4B78A364285B0FDE00E7ADD2 /* Component */,
+				4B78A35F285AEAA100E7ADD2 /* Model */,
+				4B78A35E285AEA9200E7ADD2 /* ViewModel */,
+				4B5DD7ED285ACFBC00F13FB3 /* AppDelegate.swift */,
+				4B5DD7EF285ACFBC00F13FB3 /* SceneDelegate.swift */,
+				4B5DD7F1285ACFBC00F13FB3 /* ViewController.swift */,
+				4B5DD7F6285ACFBE00F13FB3 /* Assets.xcassets */,
+				4B5DD7F8285ACFBE00F13FB3 /* LaunchScreen.storyboard */,
+				4B307C5328659DAF00946849 /* GoogleService-Info.plist */,
+				4B5DD7FB285ACFBE00F13FB3 /* Info.plist */,
+			);
+			path = CloneAxisNet;
+			sourceTree = "<group>";
+		};
+		4B5DD803285ACFBF00F13FB3 /* CloneAxisNetTests */ = {
+			isa = PBXGroup;
+			children = (
+				4B5DD804285ACFBF00F13FB3 /* CloneAxisNetTests.swift */,
+			);
+			path = CloneAxisNetTests;
+			sourceTree = "<group>";
+		};
+		4B5DD80D285ACFBF00F13FB3 /* CloneAxisNetUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4B5DD80E285ACFBF00F13FB3 /* CloneAxisNetUITests.swift */,
+				4B5DD810285ACFBF00F13FB3 /* CloneAxisNetUITestsLaunchTests.swift */,
+			);
+			path = CloneAxisNetUITests;
+			sourceTree = "<group>";
+		};
+		4B78A35E285AEA9200E7ADD2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4B78A362285AF52E00E7ADD2 /* AssetServices.swift */,
+				4B78A36D28602B1C00E7ADD2 /* BalanceServices.swift */,
+				4B78A37828617A9900E7ADD2 /* ActivePackageServices.swift */,
+				4BF1D52C2868854400AFCE21 /* ListFeaturesServices.swift */,
+				4B8AEC61286970DD00FBB8EB /* RecommendedPackageServices.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4B78A35F285AEAA100E7ADD2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4B78A360285AF40200E7ADD2 /* AssetModel.swift */,
+				4B78A36B28602A0800E7ADD2 /* BalanceModel.swift */,
+				4B78A37628616B7700E7ADD2 /* ActivePackageModel.swift */,
+				4BF1D52A2865CF8F00AFCE21 /* ListFeaturesModel.swift */,
+				4B8AEC5F28696ED300FBB8EB /* RecommendedPackageModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4B78A364285B0FDE00E7ADD2 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				4B78A36F286166F800E7ADD2 /* BodyComp */,
+				4B78A368285C8AC900E7ADD2 /* HeaderComp */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		4B78A368285C8AC900E7ADD2 /* HeaderComp */ = {
+			isa = PBXGroup;
+			children = (
+				4B35A4D9286DA461009FE1CC /* SecondHeader */,
+				4B35A4D8286DA414009FE1CC /* FirstHeader */,
+			);
+			path = HeaderComp;
+			sourceTree = "<group>";
+		};
+		4B78A36F286166F800E7ADD2 /* BodyComp */ = {
+			isa = PBXGroup;
+			children = (
+				4B7978F8286AE56000893748 /* ForeverOnlinePackage */,
+				4B7978F0286ABFCD00893748 /* RecommendedPackage */,
+				4BF1D5242865B90D00AFCE21 /* ListFeatures */,
+				4B78A3702861671C00E7ADD2 /* ActivatePackage */,
+			);
+			path = BodyComp;
+			sourceTree = "<group>";
+		};
+		4B78A3702861671C00E7ADD2 /* ActivatePackage */ = {
+			isa = PBXGroup;
+			children = (
+				4B78A3712861684900E7ADD2 /* Cell */,
+				4B78A37428616B4A00E7ADD2 /* ActivePackageCollectionView.swift */,
+			);
+			path = ActivatePackage;
+			sourceTree = "<group>";
+		};
+		4B78A3712861684900E7ADD2 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4B78A3722861687E00E7ADD2 /* ActivePackageCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		4B7978F0286ABFCD00893748 /* RecommendedPackage */ = {
+			isa = PBXGroup;
+			children = (
+				4B7978F1286ABFE400893748 /* Cell */,
+				4B7978F4286AC03C00893748 /* RecommendedPackageCollectionView.swift */,
+			);
+			path = RecommendedPackage;
+			sourceTree = "<group>";
+		};
+		4B7978F1286ABFE400893748 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4B7978F6286AC05200893748 /* RecommendedPackageCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		4B7978F8286AE56000893748 /* ForeverOnlinePackage */ = {
+			isa = PBXGroup;
+			children = (
+				4B7978F9286AE57500893748 /* Cell */,
+				4B7978FA286AE59800893748 /* ForevelOnlineCollectionView.swift */,
+			);
+			path = ForeverOnlinePackage;
+			sourceTree = "<group>";
+		};
+		4B7978F9286AE57500893748 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4B7978FC286AEFAF00893748 /* ForeverOnlineCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		4BF1D5242865B90D00AFCE21 /* ListFeatures */ = {
+			isa = PBXGroup;
+			children = (
+				4BF1D5252865B92000AFCE21 /* Cell */,
+				4BF1D5262865B96800AFCE21 /* ListFeaturesCollectionView.swift */,
+			);
+			path = ListFeatures;
+			sourceTree = "<group>";
+		};
+		4BF1D5252865B92000AFCE21 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4BF1D5282865B98300AFCE21 /* ListFeaturesCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		50C8A9CE4FA3837F2A62890A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3A4FEA9FED29460830B44323 /* Pods_CloneAxisNet.framework */,
+				B78072D75F95AA81182CBAE5 /* Pods_CloneAxisNet_CloneAxisNetUITests.framework */,
+				240AFDA7C69FC87E8AD82659 /* Pods_CloneAxisNetTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5489927CAD2D08A6F1AA4126 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				06B57E09C575E5C96B79B685 /* Pods-CloneAxisNet.debug.xcconfig */,
+				4FF3866EDAAFB618AE315692 /* Pods-CloneAxisNet.release.xcconfig */,
+				85EF28806A188ECCF9EA26CC /* Pods-CloneAxisNet-CloneAxisNetUITests.debug.xcconfig */,
+				D276B20D067BA46273D3FF6E /* Pods-CloneAxisNet-CloneAxisNetUITests.release.xcconfig */,
+				DB509D1E1AAA8F264AC7C552 /* Pods-CloneAxisNetTests.debug.xcconfig */,
+				43DC11BEB6D29DDFFE02222C /* Pods-CloneAxisNetTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4B5DD7E9285ACFBC00F13FB3 /* CloneAxisNet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B5DD814285ACFBF00F13FB3 /* Build configuration list for PBXNativeTarget "CloneAxisNet" */;
+			buildPhases = (
+				F1BF1E6B483D5AF1B3AA69AC /* [CP] Check Pods Manifest.lock */,
+				4B5DD7E6285ACFBC00F13FB3 /* Sources */,
+				4B5DD7E7285ACFBC00F13FB3 /* Frameworks */,
+				4B5DD7E8285ACFBC00F13FB3 /* Resources */,
+				FCB105B784DD74FE68B53BDE /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CloneAxisNet;
+			productName = CloneAxisNet;
+			productReference = 4B5DD7EA285ACFBC00F13FB3 /* CloneAxisNet.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4B5DD7FF285ACFBF00F13FB3 /* CloneAxisNetTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B5DD817285ACFBF00F13FB3 /* Build configuration list for PBXNativeTarget "CloneAxisNetTests" */;
+			buildPhases = (
+				CD94399EFAD8064A3AE9C8B4 /* [CP] Check Pods Manifest.lock */,
+				4B5DD7FC285ACFBF00F13FB3 /* Sources */,
+				4B5DD7FD285ACFBF00F13FB3 /* Frameworks */,
+				4B5DD7FE285ACFBF00F13FB3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4B5DD802285ACFBF00F13FB3 /* PBXTargetDependency */,
+			);
+			name = CloneAxisNetTests;
+			productName = CloneAxisNetTests;
+			productReference = 4B5DD800285ACFBF00F13FB3 /* CloneAxisNetTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4B5DD809285ACFBF00F13FB3 /* CloneAxisNetUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B5DD81A285ACFBF00F13FB3 /* Build configuration list for PBXNativeTarget "CloneAxisNetUITests" */;
+			buildPhases = (
+				9FB45AE16F4840D5F43B1D64 /* [CP] Check Pods Manifest.lock */,
+				4B5DD806285ACFBF00F13FB3 /* Sources */,
+				4B5DD807285ACFBF00F13FB3 /* Frameworks */,
+				4B5DD808285ACFBF00F13FB3 /* Resources */,
+				24821BB730BACDE49F6365CE /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4B5DD80C285ACFBF00F13FB3 /* PBXTargetDependency */,
+			);
+			name = CloneAxisNetUITests;
+			productName = CloneAxisNetUITests;
+			productReference = 4B5DD80A285ACFBF00F13FB3 /* CloneAxisNetUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4B5DD7E2285ACFBC00F13FB3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					4B5DD7E9285ACFBC00F13FB3 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					4B5DD7FF285ACFBF00F13FB3 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 4B5DD7E9285ACFBC00F13FB3;
+					};
+					4B5DD809285ACFBF00F13FB3 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 4B5DD7E9285ACFBC00F13FB3;
+					};
+				};
+			};
+			buildConfigurationList = 4B5DD7E5285ACFBC00F13FB3 /* Build configuration list for PBXProject "CloneAxisNet" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4B5DD7E1285ACFBC00F13FB3;
+			productRefGroup = 4B5DD7EB285ACFBC00F13FB3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4B5DD7E9285ACFBC00F13FB3 /* CloneAxisNet */,
+				4B5DD7FF285ACFBF00F13FB3 /* CloneAxisNetTests */,
+				4B5DD809285ACFBF00F13FB3 /* CloneAxisNetUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4B5DD7E8285ACFBC00F13FB3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B5DD7FA285ACFBE00F13FB3 /* LaunchScreen.storyboard in Resources */,
+				4B5DD7F7285ACFBE00F13FB3 /* Assets.xcassets in Resources */,
+				4B307C5428659DAF00946849 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B5DD7FE285ACFBF00F13FB3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B5DD808285ACFBF00F13FB3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		24821BB730BACDE49F6365CE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CloneAxisNet-CloneAxisNetUITests/Pods-CloneAxisNet-CloneAxisNetUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CloneAxisNet-CloneAxisNetUITests/Pods-CloneAxisNet-CloneAxisNetUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CloneAxisNet-CloneAxisNetUITests/Pods-CloneAxisNet-CloneAxisNetUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9FB45AE16F4840D5F43B1D64 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CloneAxisNet-CloneAxisNetUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD94399EFAD8064A3AE9C8B4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CloneAxisNetTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F1BF1E6B483D5AF1B3AA69AC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CloneAxisNet-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FCB105B784DD74FE68B53BDE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CloneAxisNet/Pods-CloneAxisNet-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CloneAxisNet/Pods-CloneAxisNet-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CloneAxisNet/Pods-CloneAxisNet-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4B5DD7E6285ACFBC00F13FB3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B78A363285AF52E00E7ADD2 /* AssetServices.swift in Sources */,
+				4B7978FD286AEFAF00893748 /* ForeverOnlineCollectionViewCell.swift in Sources */,
+				4BF1D5292865B98300AFCE21 /* ListFeaturesCollectionViewCell.swift in Sources */,
+				4B78A361285AF40200E7ADD2 /* AssetModel.swift in Sources */,
+				4B78A37928617A9900E7ADD2 /* ActivePackageServices.swift in Sources */,
+				4B8AEC62286970DD00FBB8EB /* RecommendedPackageServices.swift in Sources */,
+				4B35A4DB286E836D009FE1CC /* SecondHeaderComponentView.swift in Sources */,
+				4BF1D52D2868854400AFCE21 /* ListFeaturesServices.swift in Sources */,
+				4B78A36E28602B1C00E7ADD2 /* BalanceServices.swift in Sources */,
+				4B7978F7286AC05200893748 /* RecommendedPackageCollectionViewCell.swift in Sources */,
+				4BF1D52B2865CF8F00AFCE21 /* ListFeaturesModel.swift in Sources */,
+				4B7978FB286AE59800893748 /* ForevelOnlineCollectionView.swift in Sources */,
+				4B5DD7F2285ACFBC00F13FB3 /* ViewController.swift in Sources */,
+				4B8AEC6028696ED400FBB8EB /* RecommendedPackageModel.swift in Sources */,
+				4B78A3732861687E00E7ADD2 /* ActivePackageCollectionViewCell.swift in Sources */,
+				4B78A37528616B4A00E7ADD2 /* ActivePackageCollectionView.swift in Sources */,
+				4B7978F5286AC03C00893748 /* RecommendedPackageCollectionView.swift in Sources */,
+				4B78A36A285C8AEE00E7ADD2 /* FirstHeaderComponentView.swift in Sources */,
+				4B78A36C28602A0800E7ADD2 /* BalanceModel.swift in Sources */,
+				4B78A37728616B7700E7ADD2 /* ActivePackageModel.swift in Sources */,
+				4B5DD7EE285ACFBC00F13FB3 /* AppDelegate.swift in Sources */,
+				4BF1D5272865B96800AFCE21 /* ListFeaturesCollectionView.swift in Sources */,
+				4B5DD7F0285ACFBC00F13FB3 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B5DD7FC285ACFBF00F13FB3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B5DD805285ACFBF00F13FB3 /* CloneAxisNetTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B5DD806285ACFBF00F13FB3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B5DD80F285ACFBF00F13FB3 /* CloneAxisNetUITests.swift in Sources */,
+				4B5DD811285ACFBF00F13FB3 /* CloneAxisNetUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4B5DD802285ACFBF00F13FB3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4B5DD7E9285ACFBC00F13FB3 /* CloneAxisNet */;
+			targetProxy = 4B5DD801285ACFBF00F13FB3 /* PBXContainerItemProxy */;
+		};
+		4B5DD80C285ACFBF00F13FB3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4B5DD7E9285ACFBC00F13FB3 /* CloneAxisNet */;
+			targetProxy = 4B5DD80B285ACFBF00F13FB3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4B5DD7F8285ACFBE00F13FB3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4B5DD7F9285ACFBE00F13FB3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4B5DD812285ACFBF00F13FB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4B5DD813285ACFBF00F13FB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4B5DD815285ACFBF00F13FB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06B57E09C575E5C96B79B685 /* Pods-CloneAxisNet.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CloneAxisNet/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = faisal.CloneAxisNet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4B5DD816285ACFBF00F13FB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4FF3866EDAAFB618AE315692 /* Pods-CloneAxisNet.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CloneAxisNet/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = faisal.CloneAxisNet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4B5DD818285ACFBF00F13FB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB509D1E1AAA8F264AC7C552 /* Pods-CloneAxisNetTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = faisal.CloneAxisNetTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CloneAxisNet.app/CloneAxisNet";
+			};
+			name = Debug;
+		};
+		4B5DD819285ACFBF00F13FB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43DC11BEB6D29DDFFE02222C /* Pods-CloneAxisNetTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = faisal.CloneAxisNetTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CloneAxisNet.app/CloneAxisNet";
+			};
+			name = Release;
+		};
+		4B5DD81B285ACFBF00F13FB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85EF28806A188ECCF9EA26CC /* Pods-CloneAxisNet-CloneAxisNetUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = faisal.CloneAxisNetUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CloneAxisNet;
+			};
+			name = Debug;
+		};
+		4B5DD81C285ACFBF00F13FB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D276B20D067BA46273D3FF6E /* Pods-CloneAxisNet-CloneAxisNetUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = faisal.CloneAxisNetUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CloneAxisNet;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4B5DD7E5285ACFBC00F13FB3 /* Build configuration list for PBXProject "CloneAxisNet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B5DD812285ACFBF00F13FB3 /* Debug */,
+				4B5DD813285ACFBF00F13FB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B5DD814285ACFBF00F13FB3 /* Build configuration list for PBXNativeTarget "CloneAxisNet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B5DD815285ACFBF00F13FB3 /* Debug */,
+				4B5DD816285ACFBF00F13FB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B5DD817285ACFBF00F13FB3 /* Build configuration list for PBXNativeTarget "CloneAxisNetTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B5DD818285ACFBF00F13FB3 /* Debug */,
+				4B5DD819285ACFBF00F13FB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B5DD81A285ACFBF00F13FB3 /* Build configuration list for PBXNativeTarget "CloneAxisNetUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B5DD81B285ACFBF00F13FB3 /* Debug */,
+				4B5DD81C285ACFBF00F13FB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4B5DD7E2285ACFBC00F13FB3 /* Project object */;
+}
