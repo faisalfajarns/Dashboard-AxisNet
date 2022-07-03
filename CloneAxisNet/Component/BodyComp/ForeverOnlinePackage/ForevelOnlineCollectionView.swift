@@ -113,7 +113,6 @@ class ForevelOnlineCollectionView: UICollectionView,UICollectionViewDelegate, UI
                 if let formatterprice = formatter.string(from: Double(safeprice) as NSNumber){
                     cell.packagePriceLabel.text = "Rp. \(formatterprice)"
                 }
-//                cell.packagePriceLabel.text = "\(String(describing: safeprice))"
             }else {
                 //price
                 guard let safeprice = safePrice[indexPath.row].price else {
