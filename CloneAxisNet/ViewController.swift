@@ -16,6 +16,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     var listFeaturesServices = ListFeaturesServices()
     var recommendedPackageServices = RecommendedPackageServices()
     
+    private let disposeBag: DisposeBag = DisposeBag()
     private var showSecondHeader = false
     private var lastContentOffset: CGFloat = 0
     public var backgroundImageData1: String = ""
@@ -162,6 +163,9 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         ])
     }
     
+    // ------------- CodeReview - start ---------------
+    // tambahin .disposed(by: disposeBag) di akhir fungsi, biar si variable di dispose habis di subscribe. Tambahin di semua func observable yg lain ya
+    // hindarin force casting ("!") rawan crash
     func fetchAssetForViewController(){
         assetServices.fetchAssetData()
         assetServices.assetData
@@ -174,8 +178,9 @@ class ViewController: UIViewController, UIScrollViewDelegate {
                     self!.setBgImage(url : self?.backgroundImageData2 ?? "")
                     self!.setBgImage2(url: self?.backgroundImageData1 ?? "")
                 }
-            })
+            }).disposed(by: disposeBag)
     }
+    // ------------- CodeReview - end ---------------
     
     func fetchBalanceForViewController(){
         balanceServices.fetchBalanceData()
@@ -234,6 +239,8 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             })
     }
     
+    // ------------- CodeReview - start ---------------
+    // ini ada 2 function yg sama, mending jadiin satu aja
     func setBgImage(url : String){
         let urlImage1 = URL(string: url)
         if let safeUrlImag1 = urlImage1 {
@@ -255,7 +262,12 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             
         }
     }
+    // ------------- CodeReview - end ---------------
     
+    
+    // ------------- CodeReview - start ---------------
+    // 2 function ini mending dijadiin extension string aja, nanti bikin class Utils, taro extension string disana
+    // hindarin force casting, better handle pake iflet atau guardlet
     func setCurrencyFormatter(balance : String){
         print(balance)
         let formatter = NumberFormatter()
@@ -271,6 +283,6 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     func setDateFormatter(date : String){
         firstHeaderComp.expiredLabel.text = date
     }
-  
+    // ------------- CodeReview - end ---------------
 }
 

@@ -65,7 +65,10 @@ class ActivePackageCollectionView: UICollectionView, UICollectionViewDelegate, U
         }
         
         // Date Format For Cell
+        // ------------- CodeReview - start ---------------
+        // jangan di force cast ("!") kalo variable nya nil dia bakal crash
         let str = safedata[indexPath.row].benefitData.activeUntil!
+        // ------------- CodeReview - end ---------------
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         guard let date = dateFormatter.date(from: str) else {

@@ -23,7 +23,10 @@ class BalanceServices : BalanceProtocol {
         let task = URLSession.shared.dataTask(with: balanceApi!) { data, response, error in
             
             if error != nil {
+                // ------------- CodeReview - start ---------------
+                // jangan dibuat force casting gini, kalo ternyata errornya gak bisa di force cast ke String, nanti dia crash
                 print(error?.localizedDescription as! Error)
+                // ------------- CodeReview - end ---------------
                 return
             }
             if let safeDataBalance = data {
