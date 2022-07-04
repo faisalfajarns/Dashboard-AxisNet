@@ -264,6 +264,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         formatter.numberStyle = .decimal
         if let formatterBalance = formatter.string(from: Double(balance)! as NSNumber){
             firstHeaderComp.balanceLabel.text = "Rp. \(formatterBalance)"
+            secondHeaderComp.balanceLabel.text = "Rp. \(formatterBalance)"
         }
     }
     
