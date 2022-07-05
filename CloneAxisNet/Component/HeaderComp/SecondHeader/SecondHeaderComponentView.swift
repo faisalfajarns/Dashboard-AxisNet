@@ -29,6 +29,8 @@ class SecondHeaderComponentView: UIView {
     var userNameLabel : UILabel = {
        let label = UILabel()
         label.text = "Hi, AXISer"
+        label.font = label.font.withSize(17)
+        label.font = UIFont.boldSystemFont(ofSize: 17)
         label.textColor = .white
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = label.font.withSize(15)
@@ -41,6 +43,7 @@ class SecondHeaderComponentView: UIView {
         label.textColor = .white
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = label.font.withSize(14)
+        label.font = UIFont.boldSystemFont(ofSize: 14)
         return label
     }()
     

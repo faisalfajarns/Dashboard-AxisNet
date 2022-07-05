@@ -17,13 +17,6 @@ class ForevelOnlineCollectionView: UICollectionView,UICollectionViewDelegate, UI
         }
     }
     
-    var headerLabel : UILabel = {
-        let label = UILabel()
-        label.text = "Forever Online"
-        label.textColor = .black
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
 
     
     
@@ -32,10 +25,6 @@ class ForevelOnlineCollectionView: UICollectionView,UICollectionViewDelegate, UI
         layoutFlow.scrollDirection = .horizontal
     
         super.init(frame: frame, collectionViewLayout: layoutFlow)
-        addSubview(headerLabel)
-        headerLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 5).isActive = true
-        headerLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor,constant: 10).isActive = true
-        headerLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
         setupView()
         
     }
@@ -55,7 +44,7 @@ class ForevelOnlineCollectionView: UICollectionView,UICollectionViewDelegate, UI
         self.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         self.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         self.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        self.heightAnchor.constraint(equalToConstant: 300).isActive = true
+        self.heightAnchor.constraint(equalToConstant: 170).isActive = true
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -101,48 +90,41 @@ class ForevelOnlineCollectionView: UICollectionView,UICollectionViewDelegate, UI
         }
         
         if let safePrice = data {
-            let formatter = NumberFormatter()
-            formatter.locale = Locale(identifier: "id_ID")
-            formatter.groupingSeparator = "."
-            formatter.numberStyle = .decimal
-            
-            if safePrice[indexPath.row].price == safePrice[indexPath.row].price_disc {
+    
+            if safePrice[indexPath.row].price == safePrice[indexPath.row].price_disc || safePrice[indexPath.row].price_disc == 0 {
                 guard let safeprice = safePrice[indexPath.row].price else{
                     return cell
                 }
-                if let formatterprice = formatter.string(from: Double(safeprice) as NSNumber){
-                    cell.packagePriceLabel.text = "Rp. \(formatterprice)"
-                }
+                let newPrice = String(describing: safeprice)
+                cell.packagePriceDiscLabel.text = "\(newPrice.formatCurrency())"
+                
             }else {
                 //price
                 guard let safeprice = safePrice[indexPath.row].price else {
                     return cell
                 }
-                if let formatterprice = formatter.string(from: Double(safeprice) as NSNumber){
-                    let attributeString: NSMutableAttributedString = NSMutableAttributedString(string: "Rp. \(formatterprice)")
+                let newPrice = String(describing: safeprice)
+                let attributeString: NSMutableAttributedString = NSMutableAttributedString(string: "\(newPrice.formatCurrency())")
                         attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 2, range: NSRange(location: 0, length: attributeString.length))
                     cell.packagePriceLabel.attributedText = attributeString
-                }
+                
                 
                 //disc price
                 guard let safediscprice = safePrice[indexPath.row].price_disc else {
                     return cell
                 }
-                if let formatterdiscprice = formatter.string(from: Double(safediscprice) as NSNumber){
-                    cell.packagePriceDiscLabel.text = "Rp. \(formatterdiscprice)"
-                }
+                let newDiscPrice = String(describing: safediscprice)
+                cell.packagePriceDiscLabel.text = "\(newDiscPrice.formatCurrency())"
                 
                 if safediscprice == 0 {
-                    cell.packagePriceDiscLabel.text = ""
+                    cell.packagePriceDiscLabel.text = "Free"
                 }else {
-                    if let formatterdiscprice = formatter.string(from: Double(safediscprice) as NSNumber){
-                        cell.packagePriceDiscLabel.text = "Rp. \(formatterdiscprice)"
-                    }
-//                    cell.packagePriceDiscLabel.text = "\(String(describing: safediscprice))"
+                    cell.packagePriceDiscLabel.text = "\(newDiscPrice.formatCurrency())"
                 }
                 
             }
         }
+        
         
         if let safeExp = data {
             guard let safeexp = safeExp[indexPath.row].exp else {
@@ -150,11 +132,6 @@ class ForevelOnlineCollectionView: UICollectionView,UICollectionViewDelegate, UI
             }
             cell.packageExpLabel.text = "Masa aktif \(String(describing: safeexp)) hari"
         }
-        
-    
-        
-     
-       
         return cell
     }
     
@@ -164,6 +141,6 @@ class ForevelOnlineCollectionView: UICollectionView,UICollectionViewDelegate, UI
     }
 
 
-    }
+}
     
 

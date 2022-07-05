@@ -36,8 +36,10 @@ class FirstHeaderComponentView: UIView {
     
     var userNameLabel : UILabel = {
        let label = UILabel()
-        label.text = "Hi, AXISer"
+        label.text = "Hi, AXISers"
         label.textColor = .white
+        label.font = label.font.withSize(17)
+        label.font = UIFont.boldSystemFont(ofSize: 17)
         label.translatesAutoresizingMaskIntoConstraints = false
         
        return label
@@ -45,7 +47,8 @@ class FirstHeaderComponentView: UIView {
     
     var pulsaLabel : UILabel = {
       let label = UILabel()
-        label.text = "Pulsa"
+        label.text = "PULSA"
+        label.font = label.font.withSize(14)
         label.textColor = .white
         label.translatesAutoresizingMaskIntoConstraints = false
         
@@ -56,6 +59,8 @@ class FirstHeaderComponentView: UIView {
       let label = UILabel()
         label.text = "10000"
         label.textColor = .white
+        label.font = label.font.withSize(18)
+        label.font = UIFont.boldSystemFont(ofSize: 18)
         label.translatesAutoresizingMaskIntoConstraints = false
         
         return label
@@ -65,6 +70,7 @@ class FirstHeaderComponentView: UIView {
       let label = UILabel()
         label.text = "10-10-2022"
         label.textColor = .white
+        label.font = label.font.withSize(12)
         label.translatesAutoresizingMaskIntoConstraints = false
         
         return label
@@ -127,7 +133,7 @@ class FirstHeaderComponentView: UIView {
             balanceLabel.leadingAnchor.constraint(equalTo: pulsaLabel.leadingAnchor),
             expiredLabel.topAnchor.constraint(equalTo: balanceLabel.bottomAnchor),
             expiredLabel.leadingAnchor.constraint(equalTo: balanceLabel.leadingAnchor),
-            packageLabel.topAnchor.constraint(equalTo: expiredLabel.bottomAnchor, constant: 10),
+            packageLabel.topAnchor.constraint(equalTo: expiredLabel.bottomAnchor, constant: 20),
             packageLabel.leadingAnchor.constraint(equalTo: expiredLabel.leadingAnchor),
             showAllLabel.leadingAnchor.constraint(equalTo: containerLeadingLabelView.trailingAnchor, constant: 45),
             showAllLabel.topAnchor.constraint(equalTo: containerLeadingLabelView.topAnchor, constant: 105)

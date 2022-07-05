@@ -16,25 +16,11 @@ class RecommendedPackageCollectionView: UICollectionView, UICollectionViewDelega
         }
     }
     
-    var headerLabel : UILabel = {
-        let label = UILabel()
-        label.text = "Hanya Untukmu"
-        label.textColor = .black
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-
-    
-    
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         let layoutFlow = UICollectionViewFlowLayout()
         layoutFlow.scrollDirection = .horizontal
     
         super.init(frame: frame, collectionViewLayout: layoutFlow)
-        addSubview(headerLabel)
-        headerLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 5).isActive = true
-        headerLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor,constant: 10).isActive = true
-        headerLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
         setupView()
         
     }
@@ -54,7 +40,7 @@ class RecommendedPackageCollectionView: UICollectionView, UICollectionViewDelega
         self.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         self.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         self.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        self.heightAnchor.constraint(equalToConstant: 250).isActive = true
+        self.heightAnchor.constraint(equalToConstant: 210).isActive = true
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -73,49 +59,39 @@ class RecommendedPackageCollectionView: UICollectionView, UICollectionViewDelega
         }
         
         if let safePrice = data {
-            let formatter = NumberFormatter()
-            formatter.locale = Locale(identifier: "id_ID")
-            formatter.groupingSeparator = "."
-            formatter.numberStyle = .decimal
             
             if safePrice[indexPath.row].price == safePrice[indexPath.row].price_disc {
-                guard let safeprice = safePrice[indexPath.row].price else{
+                guard let safediscprice = safePrice[indexPath.row].price_disc else{
                     return cell
                 }
-                if let formatterprice = formatter.string(from: Double(safeprice) as NSNumber){
-                    cell.packagePriceLabel.text = "Rp. \(formatterprice)"
-                }
-//                cell.packagePriceLabel.text = "\(String(describing: safeprice))"
-            }else {
-                //price
-                guard let safeprice = safePrice[indexPath.row].price else {
-                    return cell
-                }
-                if let formatterprice = formatter.string(from: Double(safeprice) as NSNumber){
-                    let attributeString: NSMutableAttributedString = NSMutableAttributedString(string: "Rp. \(formatterprice)")
-                        attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 2, range: NSRange(location: 0, length: attributeString.length))
-                    cell.packagePriceLabel.attributedText = attributeString
-                }
+                let newDiscPrice = String(describing: safediscprice)
+                cell.packagePriceDiscLabel.text = newDiscPrice.formatCurrency()
+               
+                cell.packagePriceLabel.isHidden = true
+                cell.currencyPriceLabel.isHidden = true
+            } else {
                 
                 //disc price
                 guard let safediscprice = safePrice[indexPath.row].price_disc else {
                     return cell
                 }
-                if let formatterdiscprice = formatter.string(from: Double(safediscprice) as NSNumber){
-                    cell.packagePriceDiscLabel.text = "Rp. \(formatterdiscprice)"
-                }
                 
-                if safediscprice == 0 {
-                    cell.packagePriceDiscLabel.text = ""
-                }else {
-                    if let formatterdiscprice = formatter.string(from: Double(safediscprice) as NSNumber){
-                        cell.packagePriceDiscLabel.text = "Rp. \(formatterdiscprice)"
-                    }
-//                    cell.packagePriceDiscLabel.text = "\(String(describing: safediscprice))"
-                }
+                let newDiscPrice = String(describing: safediscprice)
+                cell.packagePriceDiscLabel.text = newDiscPrice.formatCurrency()
+                //end disc price
                 
+                
+                //price
+                guard let safeprice = safePrice[indexPath.row].price else {
+                    return cell
+                }
+                let newPrice = String(describing: safeprice)
+                let attributeString: NSMutableAttributedString = NSMutableAttributedString(string: newPrice.formatCurrency())
+                attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 2, range: NSRange(location: 0, length: attributeString.length))
+                cell.packagePriceLabel.attributedText = attributeString
+
             }
-        }
+    }
         
         
         
@@ -126,7 +102,6 @@ class RecommendedPackageCollectionView: UICollectionView, UICollectionViewDelega
             cell.packageExpLabel.text = "Masa aktif \(String(describing: safeexp)) hari"
         }
         
-       
         return cell
     }
     

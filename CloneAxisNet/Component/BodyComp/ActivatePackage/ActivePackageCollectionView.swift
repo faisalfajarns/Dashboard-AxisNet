@@ -66,18 +66,12 @@ class ActivePackageCollectionView: UICollectionView, UICollectionViewDelegate, U
         
         // Date Format For Cell
         // ------------- CodeReview - start ---------------
-        // jangan di force cast ("!") kalo variable nya nil dia bakal crash
-        let str = safedata[indexPath.row].benefitData.activeUntil!
-        // ------------- CodeReview - end ---------------
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        guard let date = dateFormatter.date(from: str) else {
+        // jangan di force cast ("!") kalo variable nya nil dia bakal crash //Done
+        guard let str = safedata[indexPath.row].benefitData.activeUntil else {
             return cell
         }
-        let newDateFormatter = DateFormatter()
-        newDateFormatter.dateFormat = "dd MMM YYYY"
-        let newStr = newDateFormatter.string(from: date)
-        cell.expPackageLabel.text = "Berlaku Sampai \(newStr)"
+        // ------------- CodeReview - end ---------------
+        cell.expPackageLabel.text = "Berlaku Sampai \(str.formatDate())"
         //End Date Format For Cell
         
         //Calculate For Progress bar cell

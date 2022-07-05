@@ -35,13 +35,12 @@ class ListFeaturesCollectionView: UICollectionView, UICollectionViewDelegate, UI
         self.register(ListFeaturesCollectionViewCell.self, forCellWithReuseIdentifier: ListFeaturesCollectionViewCell.listFeaturesIdentifier)
         self.delegate = self
         self.dataSource = self
-        
         self.collectionViewLayout.collectionView?.showsHorizontalScrollIndicator = false
         self.topAnchor.constraint(equalTo: topAnchor).isActive = true
         self.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         self.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         self.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        self.heightAnchor.constraint(equalToConstant: 140).isActive = true
+        self.heightAnchor.constraint(equalToConstant: 130).isActive = true
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -64,7 +63,7 @@ class ListFeaturesCollectionView: UICollectionView, UICollectionViewDelegate, UI
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         print("width::", collectionView.frame.width)
-        return CGSize(width: 100, height: 100)
+        return CGSize(width: 100, height: 120)
     }
 
 }

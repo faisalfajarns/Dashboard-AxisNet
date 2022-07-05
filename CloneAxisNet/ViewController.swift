@@ -69,6 +69,17 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         return listFeatures
     }()
     
+    lazy var headerTitleRecommendedPackageLabel : UILabel = {
+        let label = UILabel()
+        label.textColor = .purple
+        label.text = "Hanya Untukmu"
+        label.font = label.font.withSize(18)
+        label.font = UIFont.boldSystemFont(ofSize: 18)
+   
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
     lazy var recommendedPackageCollectionView : RecommendedPackageCollectionView = {
         let recommendedPackage = RecommendedPackageCollectionView()
         
@@ -76,11 +87,25 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         return recommendedPackage
     }()
     
+    var headerTitleForeverOnlineLabel : UILabel = {
+        let label = UILabel()
+        label.text = "Forever Online"
+        label.textColor = .purple
+        label.font = label.font.withSize(18)
+        label.font = UIFont.boldSystemFont(ofSize: 18)
+     
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+
+    
     lazy var foreverOnlinePackageCollectionView : ForevelOnlineCollectionView = {
         let foreverOnlinePackage = ForevelOnlineCollectionView()
         foreverOnlinePackage.translatesAutoresizingMaskIntoConstraints = false
         return foreverOnlinePackage
     }()
+    
+    
  
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,7 +117,9 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         scrollViewContainer.addArrangedSubview(firstHeaderComp)
         scrollViewContainer.addArrangedSubview(activePackageCollectionView)
         scrollViewContainer.addArrangedSubview(listFeaturesCollectionView)
+        scrollViewContainer.addArrangedSubview(headerTitleRecommendedPackageLabel)
         scrollViewContainer.addArrangedSubview(recommendedPackageCollectionView)
+        scrollViewContainer.addArrangedSubview(headerTitleForeverOnlineLabel)
         scrollViewContainer.addArrangedSubview(foreverOnlinePackageCollectionView)
         
 //        scrollViewContainer.addArrangedSubview(secondHeaderComp)
@@ -122,7 +149,6 @@ class ViewController: UIViewController, UIScrollViewDelegate {
 
     }
 
-
     func setupLayout(){
         NSLayoutConstraint.activate([
             secondHeaderComp.topAnchor.constraint(equalTo: view.topAnchor, constant: -10),
@@ -140,32 +166,37 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             scrollViewContainer.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
 //                     this is important for scrolling
             scrollViewContainer.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
-
             firstHeaderComp.heightAnchor.constraint(equalToConstant: 260),
             firstHeaderComp.widthAnchor.constraint(equalToConstant:scrollViewContainer.frame.size.width),
             firstHeaderComp.topAnchor.constraint(equalTo: scrollViewContainer.topAnchor, constant: -50),
             activePackageCollectionView.topAnchor.constraint(equalTo: firstHeaderComp.bottomAnchor, constant: -80),
             activePackageCollectionView.leadingAnchor.constraint(equalTo: scrollViewContainer.leadingAnchor),
             activePackageCollectionView.trailingAnchor.constraint(equalTo: scrollViewContainer.trailingAnchor),
+            activePackageCollectionView.bottomAnchor.constraint(equalTo: listFeaturesCollectionView.topAnchor, constant: -10),
             listFeaturesCollectionView.topAnchor.constraint(equalTo: activePackageCollectionView.bottomAnchor, constant: -10),
             listFeaturesCollectionView.leadingAnchor.constraint(equalTo: activePackageCollectionView.leadingAnchor),
             listFeaturesCollectionView.trailingAnchor.constraint(equalTo: activePackageCollectionView.trailingAnchor),
-            recommendedPackageCollectionView.topAnchor.constraint(equalTo: listFeaturesCollectionView.bottomAnchor, constant: 10),
-            recommendedPackageCollectionView.leadingAnchor.constraint(equalTo: listFeaturesCollectionView.leadingAnchor),
+            listFeaturesCollectionView.bottomAnchor.constraint(equalTo: headerTitleRecommendedPackageLabel.topAnchor, constant: -10),
+            
+            headerTitleRecommendedPackageLabel.topAnchor.constraint(equalTo: listFeaturesCollectionView.bottomAnchor, constant: 30 ),
+            headerTitleRecommendedPackageLabel.leadingAnchor.constraint(equalTo: scrollViewContainer.leadingAnchor, constant: 10),
+            headerTitleRecommendedPackageLabel.bottomAnchor.constraint(equalTo: recommendedPackageCollectionView.topAnchor, constant: -10),
+            recommendedPackageCollectionView.topAnchor.constraint(equalTo: headerTitleRecommendedPackageLabel.bottomAnchor, constant: 10),
+            recommendedPackageCollectionView.leadingAnchor.constraint(equalTo: headerTitleRecommendedPackageLabel.leadingAnchor),
             recommendedPackageCollectionView.trailingAnchor.constraint(equalTo: listFeaturesCollectionView.trailingAnchor),
-            foreverOnlinePackageCollectionView.topAnchor.constraint(equalTo: recommendedPackageCollectionView.bottomAnchor, constant: 10),
+            recommendedPackageCollectionView.bottomAnchor.constraint(equalTo: headerTitleForeverOnlineLabel.topAnchor, constant: -20),
+            headerTitleForeverOnlineLabel.topAnchor.constraint(equalTo: recommendedPackageCollectionView.bottomAnchor, constant: 20),
+            headerTitleForeverOnlineLabel.leadingAnchor.constraint(equalTo: scrollViewContainer.leadingAnchor, constant: 10),
+            headerTitleForeverOnlineLabel.bottomAnchor.constraint(equalTo: foreverOnlinePackageCollectionView.topAnchor, constant: -10),
+            foreverOnlinePackageCollectionView.topAnchor.constraint(equalTo: headerTitleForeverOnlineLabel.bottomAnchor, constant: 10),
             foreverOnlinePackageCollectionView.leadingAnchor.constraint(equalTo: recommendedPackageCollectionView.leadingAnchor),
             foreverOnlinePackageCollectionView.trailingAnchor.constraint(equalTo: recommendedPackageCollectionView.trailingAnchor),
-            
-//            secondHeaderComp.topAnchor.constraint(equalTo: foreverOnlinePackageCollectionView.bottomAnchor, constant: 20),
-//            secondHeaderComp.leadingAnchor.constraint(equalTo: foreverOnlinePackageCollectionView.leadingAnchor),
-//            secondHeaderComp.trailingAnchor.constraint(equalTo: scrollViewContainer.trailingAnchor)
         ])
     }
     
     // ------------- CodeReview - start ---------------
-    // tambahin .disposed(by: disposeBag) di akhir fungsi, biar si variable di dispose habis di subscribe. Tambahin di semua func observable yg lain ya
-    // hindarin force casting ("!") rawan crash
+    // tambahin .disposed(by: disposeBag) di akhir fungsi, biar si variable di dispose habis di subscribe. Tambahin di semua func observable yg lain ya //Done
+    // hindarin force casting ("!") rawan crash //Done
     func fetchAssetForViewController(){
         assetServices.fetchAssetData()
         assetServices.assetData
@@ -175,8 +206,8 @@ class ViewController: UIViewController, UIScrollViewDelegate {
                 self?.backgroundImageData2 = assetResponse.ui[1].value ?? ""
                 
                 DispatchQueue.main.async {
-                    self!.setBgImage(url : self?.backgroundImageData2 ?? "")
-                    self!.setBgImage2(url: self?.backgroundImageData1 ?? "")
+                    self?.setBgImage(url : self?.backgroundImageData2 ?? "")
+                    self?.setBgImage2(url: self?.backgroundImageData1 ?? "")
                 }
             }).disposed(by: disposeBag)
     }
@@ -191,7 +222,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
                     self!.setCurrencyFormatter(balance: balanceResponse.result.balance ?? "0")
                     self!.setDateFormatter(date: balanceResponse.result.activestopdate ?? "-")
                 }
-            })
+            }).disposed(by: disposeBag)
     }
     
     func fetcActivePackageForViewController(){
@@ -207,7 +238,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
                     }
                     self?.firstHeaderComp.packageLabel.text = "PAKET SAAT INI (\(String(describing: safedata)))"
                 }
-            })
+            }).disposed(by: disposeBag)
     }
     
     func fetchListFeaturesForViewController(){
@@ -216,7 +247,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             .subscribe(on: ConcurrentDispatchQueueScheduler(qos: .background))
             .subscribe(onNext: {[weak self] (listFeatureResponse) in
                 self?.listFeaturesCollectionView.dataListFeatures = listFeatureResponse.listFeatures
-            })
+            }).disposed(by: disposeBag)
     }
     
     func fetchRecommendedPackage(){
@@ -224,19 +255,16 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         recommendedPackageServices.recommendedPackageData
             .subscribe(on: ConcurrentDispatchQueueScheduler(qos: .background))
             .subscribe(onNext : {[weak self] (recommendedPackageResponse) in
-//                print("RP::", recommendedPackageResponse)
-                
                 let recommendedData = recommendedPackageResponse.categories.filter { Categories in
                     Categories.sort == 1
                 }
                 self?.recommendedPackageCollectionView.data = recommendedData[0].packages
-//                print("rd::", recommendedData[0])
                 
                 let foreverOnlineData = recommendedPackageResponse.categories.filter { Categories in
                     Categories.sort == 2
                 }
                 self?.foreverOnlinePackageCollectionView.data = foreverOnlineData[0].packages
-            })
+            }).disposed(by: disposeBag)
     }
     
     // ------------- CodeReview - start ---------------
@@ -269,15 +297,8 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     // 2 function ini mending dijadiin extension string aja, nanti bikin class Utils, taro extension string disana
     // hindarin force casting, better handle pake iflet atau guardlet
     func setCurrencyFormatter(balance : String){
-        print(balance)
-        let formatter = NumberFormatter()
-        formatter.locale = Locale(identifier: "id_ID")
-        formatter.groupingSeparator = "."
-        formatter.numberStyle = .decimal
-        if let formatterBalance = formatter.string(from: Double(balance)! as NSNumber){
-            firstHeaderComp.balanceLabel.text = "Rp. \(formatterBalance)"
-            secondHeaderComp.balanceLabel.text = "Rp. \(formatterBalance)"
-        }
+            firstHeaderComp.balanceLabel.text = "Rp. \(balance.formatCurrency())"
+            secondHeaderComp.balanceLabel.text = "Rp. \(balance.formatCurrency())"
     }
     
     func setDateFormatter(date : String){
