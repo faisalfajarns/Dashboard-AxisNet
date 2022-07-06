@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 
 
@@ -37,5 +38,17 @@ extension String  {
         
         return newStr
     }
-    
+}
+
+extension UIImageView {
+    func setBgImage(url : String){
+        let urlImage = URL(string: url)
+        if let safeUrlImage = urlImage {
+            let data = try? Data(contentsOf: safeUrlImage)
+            if let safedata = data {
+                self.image = UIImage(data: safedata) ?? UIImage()
+            }
+
+        }
+    }
 }

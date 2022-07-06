@@ -21,6 +21,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     private var lastContentOffset: CGFloat = 0
     public var backgroundImageData1: String = ""
     public var backgroundImageData2 : String = ""
+    public var imageData : [Ui] = []
     
     var scrollView : UIScrollView = {
         let scroll = UIScrollView()
@@ -205,9 +206,25 @@ class ViewController: UIViewController, UIScrollViewDelegate {
                 self?.backgroundImageData1 = assetResponse.ui[0].value ?? ""
                 self?.backgroundImageData2 = assetResponse.ui[1].value ?? ""
                 
+                var imageBackground = ""
+                var imageHeaderScroll = ""
+                
+                assetResponse.ui.map { asset in
+                    guard let safeurl = asset.value else {
+                        return
+                    }
+                    if asset.name == "header-scroll-bg"{
+                        imageHeaderScroll = safeurl
+                    }else if asset.name == "home-bg" {
+                        imageBackground = safeurl
+                    }
+                }
+                //Yang ini mas
+                self?.imageData = assetResponse.ui
+                
                 DispatchQueue.main.async {
-                    self?.setBgImage(url : self?.backgroundImageData2 ?? "")
-                    self?.setBgImage2(url: self?.backgroundImageData1 ?? "")
+                    self?.firstHeaderComp.imageView.setBgImage(url: imageBackground)
+                    self?.secondHeaderComp.imageView.setBgImage(url: imageHeaderScroll)
                 }
             }).disposed(by: disposeBag)
     }
@@ -268,28 +285,49 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     }
     
     // ------------- CodeReview - start ---------------
-    // ini ada 2 function yg sama, mending jadiin satu aja
-    func setBgImage(url : String){
-        let urlImage1 = URL(string: url)
-        if let safeUrlImag1 = urlImage1 {
-            let data1 = try? Data(contentsOf: safeUrlImag1)
-            if let safedata1 = data1 {
-                firstHeaderComp.imageView.image = UIImage(data: safedata1)
-            }
-            
-        }
-    }
+    // ini ada 2 function yg sama, mending jadiin satu aja //Done
+
+//    func setBgImage2(url : String){
+//        print("url1::", url)
+//        let urlImage1 = URL(string: url)
+//        if let safeUrlImag1 = urlImage1 {
+//            let data1 = try? Data(contentsOf: safeUrlImag1)
+//            if let safedata1 = data1 {
+//                secondHeaderComp.imageView.image = UIImage(data: safedata1)
+//            }
+//
+//        }
+//    }
     
-    func setBgImage2(url : String){
-        let urlImage1 = URL(string: url)
-        if let safeUrlImag1 = urlImage1 {
-            let data1 = try? Data(contentsOf: safeUrlImag1)
-            if let safedata1 = data1 {
-                secondHeaderComp.imageView.image = UIImage(data: safedata1)
-            }
-            
-        }
-    }
+//    func setBackgroundImage(data : [Ui]) {
+//        data.map { image in
+//            if image.name == "header-scroll-bg" {
+//                guard let safeNewImage2 = image.value else {
+//                    return
+//                }
+//                let newImage2 = URL(string: safeNewImage2)
+//                if let safeUrlImage2 = newImage2 {
+//                            let data2 = try? Data(contentsOf: safeUrlImage2)
+//                            if let safedata2 = data2 {
+//                                secondHeaderComp.imageView.image = UIImage(data: safedata2)
+//                            }
+//
+//                        }
+//            }else if image.name == "home-bg" {
+//                guard let safeNewImage1 = image.value else {
+//                    return
+//                }
+//                let newImage1 = URL(string: safeNewImage1)
+//                if let safeUrlImage1 = newImage1 {
+//                            let data1 = try? Data(contentsOf: safeUrlImage1)
+//                            if let safedata1 = data1 {
+//                                firstHeaderComp.imageView.image = UIImage(data: safedata1)
+//                            }
+//
+//                        }
+//            }
+//        }
+//    }
     // ------------- CodeReview - end ---------------
     
     
